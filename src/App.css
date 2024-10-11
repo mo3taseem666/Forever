@@ -1,0 +1,92 @@
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   src:
+      url('./assets/Fonts/static/Montserrat-Regular.ttf') format('woff'),
+      url('./assets/Fonts/static/Montserrat-Regular.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 500;
+   src:
+      url('./assets/Fonts/static/Montserrat-Medium.ttf') format('woff'),
+      url('./assets/Fonts/static/Montserrat-Medium.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 600;
+   src:
+      url('./assets/Fonts/static/Montserrat-SemiBold.ttf') format('woff'),
+      url('./assets/Fonts/static/Montserrat-SemiBold.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   src:
+      url('./assets/Fonts/static/Montserrat-Bold.ttf') format('woff'),
+      url('./assets/Fonts/static/Montserrat-Bold.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 300;
+   src:
+      url('./assets/Fonts/static/Montserrat-Light.ttf') format('woff'),
+      url('./assets/Fonts/static/Montserrat-Light.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: italic;
+   font-weight: 400;
+   src:
+      url('./assets/Fonts/static/Montserrat-Italic.ttf') format('woff'),
+      url('./assets/Fonts/static/Montserrat-Italic.ttf') format('woff2');
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   box-sizing: border-box;
+}
+
+/* Hide vertical scrollbar */
+::-webkit-scrollbar {
+   width: 0px; /* Hides the vertical scrollbar */
+}
+
+/* Custom styles for horizontal scrollbar */
+::-webkit-scrollbar:horizontal {
+   height: 8px; /* Custom height for the horizontal scrollbar */
+   background-color: blueviolet;
+   border-radius: 50%; /* Background color of the scrollbar track */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb:horizontal {
+   background-color: rgb(190, 134, 218); /* Color of the thumb */
+   border-radius: 10px; /* Rounded corners for the thumb */
+   border: 2px solid transparent; /* Space around the thumb */
+   background-clip: padding-box; /* Ensure the border is outside */
+}
+
+/* Customize scrollbar track */
+::-webkit-scrollbar-track:horizontal {
+   background-color: lightblue; /* Background of the scrollbar track */
+   border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Optional: Style when hovering over the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover:horizontal {
+   background-color: rgb(173, 124, 223); /* Darker shade when hovering */
+}
