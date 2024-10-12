@@ -52,6 +52,55 @@
       url('./assets/Fonts/static/Montserrat-Italic.ttf') format('woff2');
 }
 
+
+@font-face {
+   font-family: 'FrankRuhlLibre';
+   font-style: normal;
+   font-weight: 400;
+   src:
+      url('./assets/Fonts/static/FrankRuhlLibre-Regular.ttf') format('woff'),
+      url('./assets/Fonts/static/FrankRuhlLibre-Regular.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'FrankRuhlLibre';
+   font-style: normal;
+   font-weight: 500;
+   src:
+      url('./assets/Fonts/static/FrankRuhlLibre-Medium.ttf') format('woff'),
+      url('./assets/Fonts/static/FrankRuhlLibre-Medium.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'FrankRuhlLibre';
+   font-style: normal;
+   font-weight: 600;
+   src:
+      url('./assets/Fonts/static/FrankRuhlLibre-SemiBold.ttf') format('woff'),
+      url('./assets/Fonts/static/FrankRuhlLibre-SemiBold.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'FrankRuhlLibre';
+   font-style: normal;
+   font-weight: 700;
+   src:
+      url('./assets/Fonts/static/FrankRuhlLibre-Bold.ttf') format('woff'),
+      url('./assets/Fonts/static/FrankRuhlLibre-Bold.ttf') format('woff2');
+}
+
+@font-face {
+   font-family: 'FrankRuhlLibre';
+   font-style: normal;
+   font-weight: 300;
+   src:
+      url('./assets/Fonts/static/FrankRuhlLibre-Light.ttf') format('woff'),
+      url('./assets/Fonts/static/FrankRuhlLibre-Light.ttf') format('woff2');
+}
+
+
+
+
 * {
    box-sizing: border-box;
 }
