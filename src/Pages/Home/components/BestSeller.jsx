@@ -10,7 +10,7 @@ export default function BestSeller() {
          <p className="text-center text-sm font-medium">
             Explore our best collection and our people&apos;s favourite pieces
          </p>
-         <div className="grid gap-5 grid-cols-5">
+         <div className="grid BEST gap-5 grid-cols-5">
             {products
                .filter(el => el.bestseller)
                .slice(0,5)
@@ -20,6 +20,7 @@ export default function BestSeller() {
                      name={el.name}
                      price={el.price}
                      img={el.image}
+                     product={el}
                   />
                ))}
          </div>

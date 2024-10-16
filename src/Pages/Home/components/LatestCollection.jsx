@@ -5,7 +5,7 @@ import { products } from '../../../assets/frontend_assets/assets';
 
 export default function LatestCollection() {
    return (
-      <div className="pt-14">
+      <div className="pt-14 ">
          <Title first={'LATEST'} second={'COLLECTION'} />
          <p className="text-center text-sm font-medium">
             Explore our newest collection and be unique like our modern pieces
@@ -17,6 +17,7 @@ export default function LatestCollection() {
                   name={el.name}
                   price={el.price}
                   img={el.image}
+                  product={el}
                />
             ))}
          </div>

@@ -3,6 +3,7 @@ import HeroDiv from './components/HeroDiv';
 import LatestCollection from './components/LatestCollection';
 import BestSeller from './components/BestSeller';
 import Info from './components/Info';
+import Subscribe from '../../Golbal Components/Subscribe';
 
 export default function Home() {
    return (
@@ -11,6 +12,7 @@ export default function Home() {
          <LatestCollection />
          <BestSeller />
          <Info />
+         <Subscribe />
       </div>
    );
 }
