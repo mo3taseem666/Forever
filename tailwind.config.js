@@ -3,7 +3,8 @@ export default {
    content: ['./index.html', './src/**/*.{js,jsx}'],
    theme: {
       screens: {
-         xs: { min: '10px', max: '767px' }
+         xs: { min: '10px', max: '767px' },
+         to600 : {min : '10px' , max : '600px'}
       },
       extend: {
          fontFamily: {

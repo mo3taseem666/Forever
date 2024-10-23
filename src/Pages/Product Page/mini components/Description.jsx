@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function Description() {
    const [selected, setSelected] = useState(0);
    return (
-      <div className="flex mt-20 flex-col">
+      <div className="flex mt-20 mb-10 flex-col">
          <div className="flex text-sm ">
             <div
                onClick={() => setSelected(0)}

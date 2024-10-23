@@ -144,3 +144,47 @@ body {
       opacity: 1;
    }
 }
+
+.slick-prev,
+.slick-next {
+    display: block !important; /* Ensure they are displayed */
+    opacity: 1 !important; /* Make them visible */
+    z-index: 10; /* Bring them to the front */
+}
+
+.slick-prev {
+    left: -40px; /* Adjust position */
+}
+
+.slick-next {
+    right: -30px; /* Adjust position */
+}
+
+.slick-prev,
+.slick-next {
+   color: black; /* Change arrow color */
+   border-radius: 50%; /* Make them circular */
+}
+
+.slick-slider {
+   all: initial; /* Resets all inherited properties */
+   position: relative; /* Required for the slider */
+}
+
+.slick-prev, .slick-next {
+   color: #ffffff; /* Visible color */
+}
+
+.slick-prev:before, .slick-next:before {
+   color: rebeccapurple;
+   font-size: 30px;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+   display: flex;
+   gap: 8px;
+}
+
+.slick-initialized .slick-slide {
+   width: fit-content;
+}
