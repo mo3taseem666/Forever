@@ -5,7 +5,7 @@ import OneDiv from '../mini components/info/OneDiv';
 
 export default function Info() {
    return (
-      <div className='flex w-[90%] mx-auto items-center mt-32 justify-between'>
+      <div className='flex w-[90%] xs:flex-col xs:gap-10 mx-auto items-center mt-32 xs:mt-10 xs:border-y xs:py-10 justify-between'>
          <OneDiv
             name="Easy Exchange Policy"
             details="We offer hassle free exchange policy"

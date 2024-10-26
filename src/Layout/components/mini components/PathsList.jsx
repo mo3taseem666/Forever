@@ -1,15 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+const navItems = [
+   { id: 0, path: '/', name: 'HOME' },
+   { id: 1, path: '/Collection', name: 'COLLECTION' },
+   { id: 2, path: '/About', name: 'ABOUT' },
+   { id: 3, path: '/Contact', name: 'CONTACT' }
+];
 
 export default function PathsList() {
    const [selected, setSelected] = useState(0);
-   const navigate = useNavigate();
    const location = useLocation();
 
    console.log(location.pathname);
    console.log(selected);
 
    useEffect(() => {
+      window.scrollTo({
+         top: 0,
+         left: 0
+      });
       if (location.pathname === '/Collection') {
          setSelected(1);
       } else if (location.pathname === '/About') {
@@ -24,35 +34,17 @@ export default function PathsList() {
    }, [location.pathname]);
 
    return (
-      <ul className="flex items-center text-sm text-gray-700 font-semibold gap-4">
-         <ItemList
-            path={'/'}
-            setSelected={setSelected}
-            selected={selected}
-            id={0}
-            name="HOME"
-         />
-         <ItemList
-            path={'/Collection'}
-            setSelected={setSelected}
-            selected={selected}
-            id={1}
-            name="COLLECTION"
-         />
-         <ItemList
-            path={'/About'}
-            setSelected={setSelected}
-            selected={selected}
-            id={2}
-            name="ABOUT"
-         />
-         <ItemList
-            path={'/Contact'}
-            setSelected={setSelected}
-            selected={selected}
-            id={3}
-            name="CONTACT"
-         />
+      <ul className="flex xs:hidden items-center text-sm text-gray-700 font-semibold gap-4">
+         {navItems.map(el => (
+            <ItemList
+               key={el.id}
+               path={el.path}
+               setSelected={setSelected}
+               selected={selected}
+               id={el.id}
+               name={el.name}
+            />
+         ))}
       </ul>
    );
 }

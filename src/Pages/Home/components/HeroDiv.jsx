@@ -1,13 +1,34 @@
-import React from 'react';
-import heroPic from '../../../assets/frontend_assets/hero_img.png';
+import React, { useEffect, useState } from 'react';
+import heroPic3 from '../../../assets/frontend_assets/2147825037.webp';
+import heroPic2 from '../../../assets/frontend_assets/2148760653.webp';
+import heroPic from '../../../assets/frontend_assets/2148624967.webp';
 import LeftPart from '../mini components/Hero Div/LeftPart';
-import Title from '../../../Golbal Components/Title';
 
 export default function HeroDiv() {
+   const [selected, setSelected] = useState(heroPic);
+
+   //TO PREVENT ANIMATION ON FIRST MOUNT
+   const [count, setCount] = useState(0);
+   useEffect(() => {
+      if (selected !== heroPic) {
+         setCount(old => old + 1);
+      }
+   }, [selected]);
    return (
-      <div className="bg-[#FFDAD6] border border-black border-r-0 after:h-full after:w-[1px] relative after:absolute after:right-0 after:bg-black flex w-full">
-         <LeftPart />
-         <img src={heroPic} alt="ladyPic" className="w-1/2 shrink-0" />
+      <div className=" border border-black relative w-full">
+         <LeftPart
+            selected={selected}
+            heroPic={heroPic}
+            heroPic2={heroPic2}
+            heroPic3={heroPic3}
+            setSelected={setSelected}
+         />
+         <img
+            key={selected}
+            src={selected}
+            alt="ladyPic"
+            className={`w-full ${count && 'pulseMo'} h-[650px] ${selected === heroPic2 ? 'object-right-cus2' : selected === heroPic3 ? 'xs:object-right-cus3' : ''} xs:object-right-cus2 xs:h-[500px] xs:object-right-cus object-cover shrink-0`}
+         />
       </div>
    );
 }

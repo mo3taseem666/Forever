@@ -38,14 +38,14 @@ export default function Description() {
                </p>
             </div>
          ) : (
-            <div className="text-xs flex justify-between gap-3 p-5 border font-semibold text-gray-500">
+            <div className="text-xs xs:flex-col xs:overflow-auto xs:gap-2 flex justify-between gap-3 p-5 border font-semibold text-gray-500">
                {Array.from({ length: 8 }, (_, index) => index).map(el => (
-                  <p className="cursor-pointer" key={el}>
+                  <p className="cursor-pointer xs:w-fit" key={el}>
                      Review number {el + 1}
                   </p>
                ))}
                <p className="cursor-pointer">...</p>
-               <p className="cursor-pointer">Review number 122</p>
+               <p className="cursor-pointer xs:w-fit">Review number 122</p>
             </div>
          )}
       </div>

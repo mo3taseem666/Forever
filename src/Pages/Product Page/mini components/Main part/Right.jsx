@@ -5,7 +5,7 @@ import SelectSize from '../../../../Golbal Components/SelectSize';
 
 export default function Right({ toShow }) {
    return (
-      <div className="flex p-5 flex-col">
+      <div className="flex p-5 xs:p-0 flex-col">
          <p className="text-2xl font-semibold">{toShow.name}</p>
          <div className="text-[#ff0000] mt-2 text-sm">
             <FontAwesomeIcon icon={faStar} />

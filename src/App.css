@@ -1,4 +1,12 @@
 @font-face {
+   font-family: 'Prata';
+   font-style: normal;
+   font-weight: 400;
+   src:
+      url('./assets/Fonts/static/Prata-Regular.ttf') format('woff'),
+      url('./assets/Fonts/static/Prata-Regular.ttf') format('woff2');
+}
+@font-face {
    font-family: 'Montserrat';
    font-style: normal;
    font-weight: 400;
@@ -147,17 +155,17 @@ body {
 
 .slick-prev,
 .slick-next {
-    display: block !important; /* Ensure they are displayed */
-    opacity: 1 !important; /* Make them visible */
-    z-index: 10; /* Bring them to the front */
+   display: block !important; /* Ensure they are displayed */
+   opacity: 1 !important; /* Make them visible */
+   z-index: 10; /* Bring them to the front */
 }
 
 .slick-prev {
-    left: -40px; /* Adjust position */
+   left: -40px !important; /* Adjust position */
 }
 
 .slick-next {
-    right: -30px; /* Adjust position */
+   right: -30px !important; /* Adjust position */
 }
 
 .slick-prev,
@@ -171,20 +179,64 @@ body {
    position: relative; /* Required for the slider */
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
    color: #ffffff; /* Visible color */
 }
 
-.slick-prev:before, .slick-next:before {
-   color: rebeccapurple;
-   font-size: 30px;
+.slick-prev:before,
+.slick-next:before {
+   color: rebeccapurple !important;
+   font-size: 30px !important;
 }
 
-.slick-slider .slick-track, .slick-slider .slick-list {
+.slick-slider .slick-track,
+.slick-slider .slick-list {
    display: flex;
    gap: 8px;
 }
 
 .slick-initialized .slick-slide {
    width: fit-content;
+}
+
+@media (min-width: 10px) and (max-width: 767px) {
+   .slick-slider .slick-track,
+   .slick-slider .slick-list {
+      gap: 0px;
+   }
+}
+
+@keyframes pulseMo {
+   0% {
+      width: 0;
+   }
+
+   100% {
+      width: 1;
+   }
+}
+
+.pulseMo {
+   animation: pulseMo 0.2s ease-out; /* Keeps the duration */
+}
+
+@media (min-width: 10px) and (max-width: 767px) {
+   .xs\:object-right-cus {
+      object-position: 85% 50%;
+   }
+}
+.object-right-cus2 {
+   object-position: 50% 20%;
+}
+
+@media (min-width: 10px) and (max-width: 767px) {
+   .xs\:object-right-cus2 {
+      object-position: 75% 50%;
+   }
+}
+@media (min-width: 10px) and (max-width: 767px) {
+   .xs\:object-right-cus3 {
+      object-position: 81% 80%;
+   }
 }

@@ -1,14 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Middle() {
   return (
-    <div className='flex flex-col gap-5'>
-        <p className='text-xl font-semibold'>COMPANY</p>
+    <div className='flex flex-col gap-2'>
+        <p className='text-xl xs:text-lg font-semibold'>WEBSITE</p>
         <ul className='flex text-sm text-gray-400 font-medium flex-col'>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Delivery</li>
-            <li>Privacy policy</li>
+           <Link to='/'><li>Home</li></Link>
+           <Link to='/Collection'><li>Collection</li></Link>
+           <Link to='/About'><li>About us</li></Link>
+           <Link to='/Contact'><li>Contact</li></Link>
+
         </ul>
     </div>
   )

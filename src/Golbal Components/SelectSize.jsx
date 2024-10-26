@@ -12,14 +12,13 @@ export default function SelectSize({ className }) {
       if (cart.length) {
          localStorage.setItem('cart',JSON.stringify(cart))
       }
-   }, [JSON.stringify(cart)]);
+   }, [cart]);
 
    function handleAddToCart() {
-      setCart(old => [...old, selected]);
+      if (selected) {
+         setCart(old => [...old, selected]);
+      }
    }
-
-   console.log(cart);
-
    return (
       <div>
          <p className={`text-lg ${className} mb-3 font-medium`}>Select Size</p>

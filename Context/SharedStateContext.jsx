@@ -5,11 +5,14 @@ const MyContext = createContext();
 
 export const MyProvider = ({ children }) => {
    /////////////////
-   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
+   const [user, setUser] = useState(null);
+   const [cart, setCart] = useState(
+      JSON.parse(localStorage.getItem('cart')) || []
+   );
    /////////////////
 
    return (
-      <MyContext.Provider value={{ cart, setCart }}>
+      <MyContext.Provider value={{ cart, setCart, user, setUser }}>
          {children}
       </MyContext.Provider>
    );

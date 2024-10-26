@@ -1,15 +1,15 @@
 import React from 'react';
 
-export default function Subscribe() {
+export default function Subscribe({width}) {
    return (
-      <div className="flex flex-col items-center mt-24">
-         <p className="font-semibold text-2xl mb-2">
+      <div className={`flex flex-col ${width ? width : ''} items-center xs:mt-10 mt-24`}>
+         <p className="font-semibold text-2xl xs:text-xl mb-2">
             Subscribe now & get 20% off
          </p>
-         <p className="text-gray-400 font-medium">
+         <p className="text-gray-400 xs:text-sm text-center font-medium">
             enter your email and receive our updates and decent discount
          </p>
-         <div className="flex mt-5 w-1/2 mx-auto  ">
+         <div className="flex mt-5 w-1/2 xs:w-full mx-auto xs:mx-0  ">
             <input
                placeholder="Enter your email"
                className="p-3 w-full focus:outline-none border"
@@ -18,18 +18,6 @@ export default function Subscribe() {
             <button className="font-semibold shrink-0 px-5 bg-black text-white text-xs">
                SUBSCRIBE
             </button>
-         </div>
-         <div>
-            <p
-               onClick={() => console.log('sssssss')}
-               id="dad"
-               className="text-white"
-            >
-               adlasd;adsad
-            </p>
-            <p></p>
-            <p></p>
-            <p></p>
          </div>
       </div>
    );

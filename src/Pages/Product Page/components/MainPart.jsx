@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from '../../../assets/frontend_assets/assets';
 import Right from '../mini components/Main part/Right';
@@ -18,8 +18,8 @@ export default function MainPart({ product }) {
    };
 
    return (
-      <div className="w-[80%] mx-auto flex gap-5">
-         <div className="w-1/2 relative shrink-0">
+      <div className="w-[80%] mx-auto flex xs:flex-col xs:w-[95%] gap-5">
+         <div className="w-1/2 xs:w-full relative shrink-0">
             <img
                onMouseLeave={() => setHide(true)}
                onMouseEnter={() => setHide(false)}
@@ -37,7 +37,7 @@ export default function MainPart({ product }) {
                      left: points.x + 50,
                      top: points.y + 50
                   }}
-                  className="absolute size-1/2"
+                  className="absolute xs:hidden size-1/2"
                />
             )}
          </div>
