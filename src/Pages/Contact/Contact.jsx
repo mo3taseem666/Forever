@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../../Golbal Components/Title';
-import contactImg from '../../assets/frontend_assets/contact_img.png';
+import contactImg from '../../assets/frontend_assets/contact_img.webp';
 import Subscribe from '../../Golbal Components/Subscribe';
 
 export default function Contact() {

@@ -4,12 +4,13 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; // Import slick CSS
 import 'slick-carousel/slick/slick-theme.css'; // Import slick theme CSS
 import { settings } from '../../../Files/Slick';
+import NoProductsFoumd from '../../../Golbal Components/NoProductsFoumd';
 
 export default function RelatedProducts({ arr }) {
    return (
       <div className="w-full mt-5">
-         <Slider {...settings}>
-            {(arr.length <= 4 ? [...arr,...arr,...arr] : arr).map(el => (
+         <Slider {...(arr.length ? settings : { ...settings, arrows: false })}>
+            {(arr.length <= 4 ? [...arr, ...arr, ...arr] : arr).map(el => (
                <div key={el._id} className="flex justify-center">
                   <ProductCard
                      smallName="no"
@@ -21,6 +22,7 @@ export default function RelatedProducts({ arr }) {
                </div>
             ))}
          </Slider>
+         {!arr.length && <NoProductsFoumd />}
       </div>
    );
 }

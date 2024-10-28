@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutImg from '../../../assets/frontend_assets/about_img.png';
+import AboutImg from '../../../assets/frontend_assets/about_img.webp';
 
 export default function ImgWithParagraphs() {
    return (

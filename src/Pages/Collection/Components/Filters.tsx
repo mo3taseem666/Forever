@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FilterComponents from '../mini components/FilterComponents';
-
-export interface Props {
-   filterName: string;
-   choices: string[];
-}
+import { checkedItemsState } from '../../../Files/Interfaces';
 
 export default function Filters() {
+
+   const [checkedItems, setCkeckedItems] = useState<checkedItemsState>({
+      category: [],
+      type: []
+   });
+
    return (
       <div className="flex flex-col gap-10">
          <div className="flex flex-col gap-5">
             <FilterComponents
+               setCkeckedItems={setCkeckedItems}
+               id="category"
+               checkedItems={checkedItems}
                filterName="CATEGORIES"
-               choices={['Men', 'Women', 'kids']}
+               choices={['Men', 'Women', 'Kids']}
             />
             <FilterComponents
+               setCkeckedItems={setCkeckedItems}
+               id="type"
+               checkedItems={checkedItems}
                filterName="TYPE"
                choices={['Topwear', 'Bottomwear', 'Winterwear']}
             />

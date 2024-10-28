@@ -6,13 +6,27 @@ const MyContext = createContext();
 export const MyProvider = ({ children }) => {
    /////////////////
    const [user, setUser] = useState(null);
+   const [showLogOut, setShowLogOut] = useState(false);
+   const [filteredProducts, setFilteredProducts] = useState([]);
+
    const [cart, setCart] = useState(
       JSON.parse(localStorage.getItem('cart')) || []
    );
    /////////////////
 
    return (
-      <MyContext.Provider value={{ cart, setCart, user, setUser }}>
+      <MyContext.Provider
+         value={{
+            cart,
+            setCart,
+            user,
+            setUser,
+            showLogOut,
+            setShowLogOut,
+            setFilteredProducts,
+            filteredProducts
+         }}
+      >
          {children}
       </MyContext.Provider>
    );

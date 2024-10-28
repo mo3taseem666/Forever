@@ -1,5 +1,5 @@
 export const settings = {
-   infinite: false,
+   infinite: true,
    speed: 500,
    slidesToShow: 5,
    touchThreshold: 100,
@@ -30,6 +30,8 @@ export const settings = {
       {
          breakpoint: 700,
          settings: {
+            touchThreshold: 10,
+
             slidesToShow: 1,
             slidesToScroll: 1,
 

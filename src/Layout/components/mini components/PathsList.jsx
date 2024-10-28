@@ -12,9 +12,6 @@ export default function PathsList() {
    const [selected, setSelected] = useState(0);
    const location = useLocation();
 
-   console.log(location.pathname);
-   console.log(selected);
-
    useEffect(() => {
       window.scrollTo({
          top: 0,

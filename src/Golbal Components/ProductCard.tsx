@@ -2,47 +2,60 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export interface productProps {
-    key:number,
-    name:string,
-    price:number,
-    img:string[],
-    product:{_id : number},
-    smallName?:string,
-    width?:string
+   key: number;
+   name: string;
+   price: number;
+   img: string[];
+   product: { _id: number };
+   smallName?: string;
+   width?: string;
 }
 
-
-
-const ProductCard: React.FC<productProps> =({ img, name, price, product, width,smallName }) => {
+const ProductCard: React.FC<productProps> = ({
+   img,
+   name,
+   price,
+   product,
+   width,
+   smallName
+}) => {
    const navigate = useNavigate();
    const [isDragging, setIsDragging] = useState(false);
-   const [time,setTime] = useState<number | null>(null)
+   const [time, setTime] = useState<number | null>(null);
    const startPosition = useRef({ x: 0, y: 0 });
 
-   const handleMouseDown = (event:React.MouseEvent | React.TouchEvent) => {
-      setTime(Date.now())
+   const handleMouseDown = (event: React.MouseEvent | React.TouchEvent) => {
+      setTime(Date.now());
       if ('button' in event && event.button === 2) {
          event.preventDefault();
          return;
       }
 
       startPosition.current = {
-           x: 'clientX' in event ? event.clientX : 0
-         , y: 'clientY' in event ? event.clientY : 0 };
+         x: 'clientX' in event ? event.clientX : 0,
+         y: 'clientY' in event ? event.clientY : 0
+      };
       setIsDragging(false);
    };
 
-   const handleMouseMove = (event : React.MouseEvent | React.TouchEvent) => {
-      const deltaX = Math.abs(('clientX' in event ? event.clientX : 0) - startPosition.current.x);
-      const deltaY = Math.abs(('clientY' in event ? event.clientY : 0) - startPosition.current.y);
+   const handleMouseMove = (event: React.MouseEvent | React.TouchEvent) => {
+      const deltaX = Math.abs(
+         ('clientX' in event ? event.clientX : 0) - startPosition.current.x
+      );
+      const deltaY = Math.abs(
+         ('clientY' in event ? event.clientY : 0) - startPosition.current.y
+      );
       if (deltaX > 5 || deltaY > 5) {
          setIsDragging(true);
       }
    };
 
    const handleMouseUp = () => {
-      const time2 : number = Date.now() - (time ? time : 0) ;
-      if (!isDragging && time2 <= 200) {
+      const time2: number = Date.now() - (time ? time : 0);
+      const isMobile = window.innerWidth <= 768;
+      const threshold = isMobile ? 20 : 200;
+
+      if (!isDragging && time2 <= threshold) {
          navigate(`/product/${product._id}`, { state: product });
       }
       setIsDragging(false);
@@ -66,9 +79,13 @@ const ProductCard: React.FC<productProps> =({ img, name, price, product, width,s
             />
          </div>
          <p className={`${smallName ? '' : 'xs:text-sm'} xs:mb-1`}>{name}</p>
-         <p className={`font-semibold ${smallName ? 'xs:text-base text-sm' : 'xs:text-xs text-sm'} `}>$ {price}</p>
+         <p
+            className={`font-semibold ${smallName ? 'xs:text-base text-sm' : 'xs:text-xs text-sm'} `}
+         >
+            $ {price}
+         </p>
       </div>
    );
-}
+};
 
 export default ProductCard;

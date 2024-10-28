@@ -7,17 +7,16 @@ export default function LeftPart({
    heroPic,
    selected
 }) {
-
    const [clicked, setClicked] = useState(false);
 
    function handleClick(e) {
-      e.stopPropagation()
+      e.stopPropagation();
    }
 
    return (
       <div
          onClick={() => setClicked(!clicked)}
-         className={`${clicked ? 'xs:opacity-0' : ''} duration-200 absolute h-full left-20 backdrop-blur-sm xs:bg-white/40 xs:left-0 xs:gap-4 xs:w-full text-gray-800 xs:text-gray-950 gap-10 flex-row-reverse flex items-center justify-center`}
+         className={`${clicked ? 'xs:opacity-0' : ''} duration-200 absolute top-0 h-full left-20 xs:backdrop-blur-sm xs:bg-white/40 xs:left-0 xs:gap-4 xs:w-full text-gray-800 xs:text-gray-950 gap-10 flex-row-reverse flex items-center justify-center`}
       >
          <div className="flex cursor-default flex-col gap-2 justify-center">
             <div className="flex gap-2 items-center">
@@ -32,7 +31,10 @@ export default function LeftPart({
                <div className="h-[1px] w-10 bg-gray-800"></div>
             </div>
          </div>
-         <div onClick={e=>handleClick(e)} className="flex flex-col items-center gap-3 ">
+         <div
+            onClick={e => handleClick(e)}
+            className="flex flex-col items-center gap-3 "
+         >
             <div className="size-4 xs:size-3 flex justify-center items-center">
                <div
                   onClick={() => setSelected(heroPic2)}
