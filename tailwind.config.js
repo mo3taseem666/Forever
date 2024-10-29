@@ -10,7 +10,7 @@ export default {
          fontFamily: {
             Montserrat: ['Montserrat', 'sans-serif'],
             FrankRuhlLibre: ['FrankRuhlLibre', 'sans-serif'],
-            Prata: ['Prata'],
+            Prata: ['Prata','sans-serif'],
 
          },
          boxShadow: {

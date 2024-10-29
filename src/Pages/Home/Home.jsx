@@ -5,20 +5,25 @@ import BestSeller from './components/BestSeller';
 import Info from './components/Info';
 import Subscribe from '../../Golbal Components/Subscribe';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { notifySuccessLogin } from '../../Files/Toast';
+import { notifySuccessLogin, notifySuccessSignUp } from '../../Files/Toast';
 import { ToastContainer } from 'react-toastify';
+import { useMyProvider } from '../../../Context/SharedStateContext';
 
 export default function Home() {
    const location = useLocation();
    const navigate = useNavigate();
-   console.log(location.state);
+   const { userInfo } = useMyProvider();
+   console.log(userInfo);
 
    useEffect(() => {
       if (location?.state?.loggedIn) {
-         notifySuccessLogin();
+         notifySuccessLogin(userInfo?.fullName ? userInfo.fullName : '');
+         navigate('/', { replace: true });
+      } else if (location?.state?.SingedUp) {
+         notifySuccessSignUp();
          navigate('/', { replace: true });
       }
-   }, [location.state, navigate]);
+   }, [location.state, navigate,userInfo]);
 
    return (
       <>

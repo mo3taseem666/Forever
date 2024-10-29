@@ -1,8 +1,18 @@
+import { useNavigate } from 'react-router-dom';
 import gmailIcon from '../../../assets/frontend_assets/gmail.svg';
 import { signInWithGoogle } from '../../../firebase/Firebase';
-
+import { notifyErrLogin } from '../../../Files/Toast';
 
 export default function BelowForm() {
+   const navigate = useNavigate()
+   async function handleGoogleLogin() {
+      const result = await signInWithGoogle();
+      if (result) {
+         navigate('/', { state: { loggedIn: true } });
+      } else {
+         notifyErrLogin();
+      }
+   }
    return (
       <div className="w-full">
          <div className="flex mt-1 items-center justify-center gap-3">
@@ -11,7 +21,7 @@ export default function BelowForm() {
             <div className="w-full bg-gray-400 mb-1 h-px"></div>
          </div>
          <div
-            onClick={signInWithGoogle}
+            onClick={handleGoogleLogin}
             className="w-full group bg-gradient-to-br hover:shadow-gray-400 duration-200 hover:shadow-lg rounded-md py-2 min-h-[46px] cursor-pointer shadow-md shadow-gray-300 from-gray-100 to-gray-200 mt-4"
          >
             <div className="flex group items-center group-hover:scale-100 scale-95 duration-200 justify-center gap-5">

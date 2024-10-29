@@ -25,3 +25,10 @@ export interface checkedItemsState {
    category: string[];
    type: string[];
 }
+
+export interface SignUpData {
+   email : string,
+   fullName: string,
+   password:string ,
+   phoneNumber : string
+}

@@ -8,13 +8,17 @@ import { useNavigate } from 'react-router-dom';
 import BelowForm from './BelowForm';
 import { ToastContainer, toast } from 'react-toastify';
 import { notifyErrLogin } from '../../../Files/Toast';
+import { setLoginProp } from '../SingIn';
+import InputField from './InputField';
+import { useMyProvider } from '../../../../Context/SharedStateContext';
 
 interface Data {
    email: string;
    password: string;
 }
 
-const SignInForm: React.FC = ({}) => {
+const SignInForm: React.FC<setLoginProp> = ({ setLogin }) => {
+   const { setUserInfo } = useMyProvider();
    const [loading, setLoading] = useState(false);
 
    const {
@@ -28,14 +32,18 @@ const SignInForm: React.FC = ({}) => {
 
    async function onSubmit(data: Data) {
       setLoading(true);
-      console.log(data);
       const result = await signInWithEmailPassword(data.email, data.password);
-      if (result) {
+      if (result?.user) {
          setLoading(false);
-         navigate('/', { state: { loggedIn: true } });
       } else {
          notifyErrLogin();
          setLoading(false);
+      }
+      if (result?.result2) {
+         setUserInfo(result?.result2);
+      }
+      if (result?.result2 && result.user) {
+         navigate('/', { state: { loggedIn: true } });
       }
    }
 
@@ -44,34 +52,27 @@ const SignInForm: React.FC = ({}) => {
          <ToastContainer />
          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col gap-4">
-               <div className="relative">
-                  <input
-                     {...register('email')}
-                     className="px-2 font-medium py-2 border border-black focus:outline-none xs:min-w-80 min-w-96"
-                     placeholder="Email"
-                     type="text"
-                  />
-                  {errors.email && (
-                     <InputErrorMsg errorMsg={errors.email.message} />
-                  )}
-               </div>
-
-               <div className="relative">
-                  <input
-                     {...register('password')}
-                     className="px-2 font-medium py-2 border border-black focus:outline-none xs:min-w-80 min-w-96"
-                     placeholder="password"
-                     type="password"
-                  />
-                  {errors.password && (
-                     <InputErrorMsg errorMsg={errors.password.message} />
-                  )}
-               </div>
+               <InputField
+                  registerFn={register}
+                  name="email"
+                  type="text"
+                  placeholder="Email"
+                  errorMsg={errors?.email?.message as string}
+               />
+               <InputField
+                  registerFn={register}
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  errorMsg={errors?.password?.message as string}
+               />
             </div>
 
             <div className="w-full mt-2 text-sm font-medium flex justify-between items-center">
                <p className="cursor-pointer">Forgot your password?</p>
-               <p className="cursor-pointer">Create account</p>
+               <p onClick={() => setLogin(false)} className="cursor-pointer">
+                  Create account
+               </p>
             </div>
 
             <button

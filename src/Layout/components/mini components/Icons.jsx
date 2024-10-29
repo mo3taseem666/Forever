@@ -8,30 +8,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useMyProvider } from '../../../../Context/SharedStateContext';
 import { Link } from 'react-router-dom';
 import LogOutPart from '../../../Golbal Components/LogOutPart';
+import { useEffect, useState } from 'react';
 
 export default function Icons() {
-   const { user, setShowLogOut, showLogOut } = useMyProvider();
+   const { user, setShowLogOut, showLogOut,userInfo } = useMyProvider();
+   const [img, setImg] = useState(null);
+
+   
 
    function handleClick(e) {
-      console.log(e);
-
       e.stopPropagation();
       setShowLogOut(!showLogOut);
    }
+
+   useEffect(() => {
+      setImg(user?.photoURL);
+   }, [user]);
 
    return (
       <div className="text-xl flex items-center gap-5">
          <FontAwesomeIcon className="cursor-pointer" icon={faMagnifyingGlass} />
          <div className="relative">
             {user ? (
-               user.photoURL ? (
+               img ? (
                   <img
                      onClick={handleClick}
                      title={user.displayName}
                      className="w-6 cursor-pointer rounded-full"
-                     src={user.photoURL}
+                     src={img}
                      alt="profilePic"
                   />
+               ) : userInfo ? (
+                  <div
+                     onClick={handleClick}
+                     title={userInfo.fullName}
+                     className="bg-blue-500 size-6 text-white cursor-pointer rounded-full flex items-center text-sm font-bold justify-center"
+                  >
+                     {userInfo.fullName?.charAt(0).toUpperCase()}
+                  </div>
                ) : (
                   <FontAwesomeIcon
                      onClick={handleClick}

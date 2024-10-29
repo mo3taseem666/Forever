@@ -5,7 +5,7 @@ import heroPic from '../../../assets/frontend_assets/2148624967.webp';
 import LeftPart from '../mini components/Hero Div/LeftPart';
 
 export default function HeroDiv() {
-   const [selected, setSelected] = useState(heroPic);
+   const [selected, setSelected] = useState(heroPic2);
 
    const [count, setCount] = useState(0);
    useEffect(() => {

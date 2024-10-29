@@ -7,7 +7,7 @@ export default function LeftPart({
    heroPic,
    selected
 }) {
-   const [clicked, setClicked] = useState(false);
+   const [clicked, setClicked] = useState(true);
 
    function handleClick(e) {
       e.stopPropagation();
@@ -37,16 +37,17 @@ export default function LeftPart({
          >
             <div className="size-4 xs:size-3 flex justify-center items-center">
                <div
-                  onClick={() => setSelected(heroPic2)}
-                  className={`${selected === heroPic2 ? 'size-4 xs:size-3 bg-gray-700 xs:bg-gray-950' : 'size-3 xs:size-2 bg-gray-500 xs:bg-gray-700'} cursor-pointer duration-[100ms] ease-in-out rounded-full`}
-               ></div>
-            </div>
-            <div className="size-4 xs:size-3 flex justify-center items-center">
-               <div
                   onClick={() => setSelected(heroPic)}
                   className={`${selected === heroPic ? 'size-4 xs:size-3 bg-gray-700 xs:bg-gray-950' : 'size-3 xs:size-2 bg-gray-500 xs:bg-gray-700'} cursor-pointer duration-[100ms] ease-in-out rounded-full`}
                ></div>
             </div>
+            <div className="size-4 xs:size-3 flex justify-center items-center">
+               <div
+                  onClick={() => setSelected(heroPic2)}
+                  className={`${selected === heroPic2 ? 'size-4 xs:size-3 bg-gray-700 xs:bg-gray-950' : 'size-3 xs:size-2 bg-gray-500 xs:bg-gray-700'} cursor-pointer duration-[100ms] ease-in-out rounded-full`}
+               ></div>
+            </div>
+
             <div className="size-4 xs:size-3 flex justify-center items-center">
                <div
                   onClick={() => setSelected(heroPic3)}
