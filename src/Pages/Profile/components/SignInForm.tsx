@@ -41,6 +41,8 @@ const SignInForm: React.FC<setLoginProp> = ({ setLogin }) => {
       }
       if (result?.result2) {
          setUserInfo(result?.result2);
+      } else {
+         setUserInfo({})
       }
       if (result?.result2 && result.user) {
          navigate('/', { state: { loggedIn: true } });

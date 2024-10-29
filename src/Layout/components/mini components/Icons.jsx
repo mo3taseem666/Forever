@@ -9,10 +9,14 @@ import { useMyProvider } from '../../../../Context/SharedStateContext';
 import { Link } from 'react-router-dom';
 import LogOutPart from '../../../Golbal Components/LogOutPart';
 import { useEffect, useState } from 'react';
+import altImg from '../../../../public/assets/frontend_assets/altImg.svg'
 
 export default function Icons() {
    const { user, setShowLogOut, showLogOut,userInfo } = useMyProvider();
    const [img, setImg] = useState(null);
+
+   console.log(img);
+   
 
    
 
@@ -35,7 +39,7 @@ export default function Icons() {
                      onClick={handleClick}
                      title={user.displayName}
                      className="w-6 cursor-pointer rounded-full"
-                     src={img}
+                     src={img||user.photoURL||altImg}
                      alt="profilePic"
                   />
                ) : userInfo ? (

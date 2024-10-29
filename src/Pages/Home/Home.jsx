@@ -12,12 +12,12 @@ import { useMyProvider } from '../../../Context/SharedStateContext';
 export default function Home() {
    const location = useLocation();
    const navigate = useNavigate();
-   const { userInfo } = useMyProvider();
+   const { userInfo,user } = useMyProvider();
    console.log(userInfo);
 
    useEffect(() => {
       if (location?.state?.loggedIn) {
-         notifySuccessLogin(userInfo?.fullName ? userInfo.fullName : '');
+         notifySuccessLogin(userInfo?.fullName ? userInfo.fullName : user?.displayName ? user.displayName : '');
          navigate('/', { replace: true });
       } else if (location?.state?.SingedUp) {
          notifySuccessSignUp();

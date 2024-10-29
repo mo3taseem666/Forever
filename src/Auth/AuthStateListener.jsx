@@ -30,6 +30,8 @@ export function AuthStateListener() {
       const userInfo = localStorage.getItem('userInfo');
       if (userInfo) {
          setUserInfo(JSON.parse(userInfo)); // Set saved user on load
+      } else {
+         setUserInfo({})
       }
    }, [setUserInfo, user]);
 
