@@ -5,7 +5,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 100,
-      image: ['/src/assets/frontend_assets/p_img1.png'],
+      image: ['/assets/frontend_assets/p_img1.png'],
       category: 'Women',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L'],
@@ -18,7 +18,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 200,
-      image: ['/src/assets/frontend_assets/p_img2_1.png'],
+      image: ['/assets/frontend_assets/p_img2_1.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['M', 'L', 'XL'],
@@ -31,7 +31,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 220,
-      image: ['/src/assets/frontend_assets/p_img3.png'],
+      image: ['/assets/frontend_assets/p_img3.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'L', 'XL'],
@@ -44,7 +44,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 110,
-      image: ['/src/assets/frontend_assets/p_img4.png'],
+      image: ['/assets/frontend_assets/p_img4.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'XXL'],
@@ -57,7 +57,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 130,
-      image: ['/src/assets/frontend_assets/p_img5.png'],
+      image: ['/assets/frontend_assets/p_img5.png'],
       category: 'Women',
       subCategory: 'Topwear',
       sizes: ['M', 'L', 'XL'],
@@ -70,7 +70,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 140,
-      image: ['/src/assets/frontend_assets/p_img6.png'],
+      image: ['/assets/frontend_assets/p_img6.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'L', 'XL'],
@@ -83,7 +83,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 190,
-      image: ['/src/assets/frontend_assets/p_img7.png'],
+      image: ['/assets/frontend_assets/p_img7.png'],
       category: 'Men',
       subCategory: 'Bottomwear',
       sizes: ['S', 'L', 'XL'],
@@ -96,7 +96,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 140,
-      image: ['/src/assets/frontend_assets/p_img8.png'],
+      image: ['/assets/frontend_assets/p_img8.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -109,7 +109,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 100,
-      image: ['/src/assets/frontend_assets/p_img9.png'],
+      image: ['/assets/frontend_assets/p_img9.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['M', 'L', 'XL'],
@@ -122,7 +122,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 110,
-      image: ['/src/assets/frontend_assets/p_img10.png'],
+      image: ['/assets/frontend_assets/p_img10.png'],
       category: 'Men',
       subCategory: 'Bottomwear',
       sizes: ['S', 'L', 'XL'],
@@ -135,7 +135,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 120,
-      image: ['/src/assets/frontend_assets/p_img11.png'],
+      image: ['/assets/frontend_assets/p_img11.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L'],
@@ -148,7 +148,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 150,
-      image: ['/src/assets/frontend_assets/p_img12.png'],
+      image: ['/assets/frontend_assets/p_img12.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -161,7 +161,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 130,
-      image: ['/src/assets/frontend_assets/p_img13.png'],
+      image: ['/assets/frontend_assets/p_img13.png'],
       category: 'Women',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -174,7 +174,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 160,
-      image: ['/src/assets/frontend_assets/p_img14.png'],
+      image: ['/assets/frontend_assets/p_img14.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -187,7 +187,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 140,
-      image: ['/src/assets/frontend_assets/p_img15.png'],
+      image: ['/assets/frontend_assets/p_img15.png'],
       category: 'Men',
       subCategory: 'Bottomwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -200,7 +200,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 170,
-      image: ['/src/assets/frontend_assets/p_img16.png'],
+      image: ['/assets/frontend_assets/p_img16.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -213,7 +213,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 150,
-      image: ['/src/assets/frontend_assets/p_img17.png'],
+      image: ['/assets/frontend_assets/p_img17.png'],
       category: 'Men',
       subCategory: 'Bottomwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -226,7 +226,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 180,
-      image: ['/src/assets/frontend_assets/p_img18.png'],
+      image: ['/assets/frontend_assets/p_img18.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -239,7 +239,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 160,
-      image: ['/src/assets/frontend_assets/p_img19.png'],
+      image: ['/assets/frontend_assets/p_img19.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -252,7 +252,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 190,
-      image: ['/src/assets/frontend_assets/p_img20.png'],
+      image: ['/assets/frontend_assets/p_img20.png'],
       category: 'Women',
       subCategory: 'Bottomwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -265,7 +265,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 170,
-      image: ['/src/assets/frontend_assets/p_img21.png'],
+      image: ['/assets/frontend_assets/p_img21.png'],
       category: 'Women',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -278,7 +278,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 200,
-      image: ['/src/assets/frontend_assets/p_img22.png'],
+      image: ['/assets/frontend_assets/p_img22.png'],
       category: 'Women',
       subCategory: 'Bottomwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -291,7 +291,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 180,
-      image: ['/src/assets/frontend_assets/p_img23.png'],
+      image: ['/assets/frontend_assets/p_img23.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -304,7 +304,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 210,
-      image: ['/src/assets/frontend_assets/p_img24.png'],
+      image: ['/assets/frontend_assets/p_img24.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -317,7 +317,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 190,
-      image: ['/src/assets/frontend_assets/p_img25.png'],
+      image: ['/assets/frontend_assets/p_img25.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -330,7 +330,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 220,
-      image: ['/src/assets/frontend_assets/p_img26.png'],
+      image: ['/assets/frontend_assets/p_img26.png'],
       category: 'Women',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -343,7 +343,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 200,
-      image: ['/src/assets/frontend_assets/p_img27.png'],
+      image: ['/assets/frontend_assets/p_img27.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -356,7 +356,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 230,
-      image: ['/src/assets/frontend_assets/p_img28.png'],
+      image: ['/assets/frontend_assets/p_img28.png'],
       category: 'Men',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -369,7 +369,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 210,
-      image: ['/src/assets/frontend_assets/p_img29.png'],
+      image: ['/assets/frontend_assets/p_img29.png'],
       category: 'Women',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -382,7 +382,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 240,
-      image: ['/src/assets/frontend_assets/p_img30.png'],
+      image: ['/assets/frontend_assets/p_img30.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -395,7 +395,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 220,
-      image: ['/src/assets/frontend_assets/p_img31.png'],
+      image: ['/assets/frontend_assets/p_img31.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -408,7 +408,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 250,
-      image: ['/src/assets/frontend_assets/p_img32.png'],
+      image: ['/assets/frontend_assets/p_img32.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -421,7 +421,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 230,
-      image: ['/src/assets/frontend_assets/p_img33.png'],
+      image: ['/assets/frontend_assets/p_img33.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -434,7 +434,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 260,
-      image: ['/src/assets/frontend_assets/p_img34.png'],
+      image: ['/assets/frontend_assets/p_img34.png'],
       category: 'Women',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -447,7 +447,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 240,
-      image: ['/src/assets/frontend_assets/p_img35.png'],
+      image: ['/assets/frontend_assets/p_img35.png'],
       category: 'Women',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -460,7 +460,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 270,
-      image: ['/src/assets/frontend_assets/p_img36.png'],
+      image: ['/assets/frontend_assets/p_img36.png'],
       category: 'Women',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -473,7 +473,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 250,
-      image: ['/src/assets/frontend_assets/p_img37.png'],
+      image: ['/assets/frontend_assets/p_img37.png'],
       category: 'Women',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -486,7 +486,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 280,
-      image: ['/src/assets/frontend_assets/p_img38.png'],
+      image: ['/assets/frontend_assets/p_img38.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -499,7 +499,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 260,
-      image: ['/src/assets/frontend_assets/p_img39.png'],
+      image: ['/assets/frontend_assets/p_img39.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -512,7 +512,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 290,
-      image: ['/src/assets/frontend_assets/p_img40.png'],
+      image: ['/assets/frontend_assets/p_img40.png'],
       category: 'Men',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -525,7 +525,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 270,
-      image: ['/src/assets/frontend_assets/p_img41.png'],
+      image: ['/assets/frontend_assets/p_img41.png'],
       category: 'Men',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -538,7 +538,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 300,
-      image: ['/src/assets/frontend_assets/p_img42.png'],
+      image: ['/assets/frontend_assets/p_img42.png'],
       category: 'Kids',
       subCategory: 'Topwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -551,7 +551,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 280,
-      image: ['/src/assets/frontend_assets/p_img43.png'],
+      image: ['/assets/frontend_assets/p_img43.png'],
       category: 'Kids',
       subCategory: 'Bottomwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -564,7 +564,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 310,
-      image: ['/src/assets/frontend_assets/p_img44.png'],
+      image: ['/assets/frontend_assets/p_img44.png'],
       category: 'Women',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -577,7 +577,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 290,
-      image: ['/src/assets/frontend_assets/p_img45.png'],
+      image: ['/assets/frontend_assets/p_img45.png'],
       category: 'Men',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -590,7 +590,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 320,
-      image: ['/src/assets/frontend_assets/p_img46.png'],
+      image: ['/assets/frontend_assets/p_img46.png'],
       category: 'Men',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -603,7 +603,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 300,
-      image: ['/src/assets/frontend_assets/p_img47.png'],
+      image: ['/assets/frontend_assets/p_img47.png'],
       category: 'Kids',
       subCategory: 'Bottomwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -616,7 +616,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 330,
-      image: ['/src/assets/frontend_assets/p_img48.png'],
+      image: ['/assets/frontend_assets/p_img48.png'],
       category: 'Men',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -629,7 +629,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 310,
-      image: ['/src/assets/frontend_assets/p_img49.png'],
+      image: ['/assets/frontend_assets/p_img49.png'],
       category: 'Kids',
       subCategory: 'Bottomwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -642,7 +642,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 340,
-      image: ['/src/assets/frontend_assets/p_img50.png'],
+      image: ['/assets/frontend_assets/p_img50.png'],
       category: 'Kids',
       subCategory: 'Bottomwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -655,7 +655,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 320,
-      image: ['/src/assets/frontend_assets/p_img51.png'],
+      image: ['/assets/frontend_assets/p_img51.png'],
       category: 'Women',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -668,7 +668,7 @@ export const products = [
       description:
          'A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.',
       price: 350,
-      image: ['/src/assets/frontend_assets/p_img52.png'],
+      image: ['/assets/frontend_assets/p_img52.png'],
       category: 'Men',
       subCategory: 'Winterwear',
       sizes: ['S', 'M', 'L', 'XL'],

@@ -6,7 +6,7 @@ export interface productProps {
    name: string;
    price: number;
    img: string[];
-   product: { _id: number };
+   product: { _id: number,image:string[] };
    smallName?: string;
    width?: string;
 }
@@ -74,7 +74,7 @@ const ProductCard: React.FC<productProps> = ({
          <div className="mb-2 overflow-hidden">
             <img
                className="w-full hover:scale-110 duration-200"
-               src={img[0]}
+               src={product?.image[0]}
                alt="product"
             />
          </div>
