@@ -11,6 +11,9 @@ export default function ProductPage() {
    const product = location.state;
    const relatedProducts = useGetRelated(product);
 
+   console.log(product);
+   
+
    useEffect(() => {
       window.scrollTo({top:0,left:0,behavior:'smooth'});
    }, [product]);
