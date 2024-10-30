@@ -8,29 +8,20 @@ interface UseGetFilteredProps {
 }
 
 export default function useGetFiltered({ checkedItems }: UseGetFilteredProps) {
-   const { setFilteredProducts } = useMyProvider();
+   const { setFilteredProducts, priceRange } = useMyProvider();
 
    useEffect(() => {
       const types = checkedItems.type;
       const categories = checkedItems.category;
 
       const filteredProducts = products.filter((el: Product) => {
-         if (types.length && !categories.length) {
-            return types.includes(el.subCategory);
-         } else if (!types.length && categories.length) {
-            return categories.includes(el.category);
-         } else {
-            return (
-               types.includes(el.subCategory) &&
-               categories.includes(el.category)
-            );
-         }
+         const withinType = !types.length || types.includes(el.subCategory);
+         const withinCategory = !categories.length || categories.includes(el.category);
+         const withinPrice = el.price >= priceRange[0] && el.price <= priceRange[1];
+
+         return withinType && withinCategory && withinPrice;
       });
 
-      if (!types.length && !categories.length) {
-         setFilteredProducts(products);
-      } else {
-         setFilteredProducts(filteredProducts);
-      }
-   }, [checkedItems, setFilteredProducts]);
+      setFilteredProducts(filteredProducts);
+   }, [checkedItems, setFilteredProducts, priceRange]);
 }

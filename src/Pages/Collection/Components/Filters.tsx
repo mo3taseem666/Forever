@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FilterComponents from '../mini components/FilterComponents';
 import { checkedItemsState } from '../../../Files/Interfaces';
+import PriceFilter from '../mini components/PriceFilter';
 
 export default function Filters() {
 
@@ -26,6 +27,7 @@ export default function Filters() {
                filterName="TYPE"
                choices={['Topwear', 'Bottomwear', 'Winterwear']}
             />
+            <PriceFilter />
          </div>
       </div>
    );

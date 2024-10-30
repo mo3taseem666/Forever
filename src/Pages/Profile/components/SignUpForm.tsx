@@ -71,7 +71,7 @@ export default function SignUpForm({
             onSubmit={handleSubmit(handleForm)}
             className="flex flex-col gap-3"
          >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
                <InputField
                   registerFn={register}
                   errorMsg={errors.fullName?.message as string | undefined}
@@ -101,7 +101,7 @@ export default function SignUpForm({
                   type="password"
                />
             </div>
-            <div className="w-full mt-2 text-sm font-medium flex flex-row-reverse items-center">
+            <div className="w-full  text-sm font-medium flex flex-row-reverse items-center">
                <p onClick={() => setLogin(true)} className="cursor-pointer">
                   Already have Account ?
                </p>

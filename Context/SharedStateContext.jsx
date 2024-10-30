@@ -9,6 +9,7 @@ export const MyProvider = ({ children }) => {
    const [showLogOut, setShowLogOut] = useState(false);
    const [filteredProducts, setFilteredProducts] = useState([]);
    const [userInfo,setUserInfo] = useState({})
+   const [priceRange, setPriceRange] = useState([0, 1000]);
 
    const [cart, setCart] = useState(
       JSON.parse(localStorage.getItem('cart')) || []
@@ -27,7 +28,9 @@ export const MyProvider = ({ children }) => {
             setFilteredProducts,
             filteredProducts,
             userInfo,
-            setUserInfo
+            setUserInfo,
+            priceRange,
+            setPriceRange
          }}
       >
          {children}
