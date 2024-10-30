@@ -20,14 +20,13 @@ export default function ProductPage() {
                el =>
                   el._id ==
                   location?.pathname?.split('/')[
-                     location?.pathname?.split('/')?.length
+                     location?.pathname?.split('/')?.length - 1
                   ]
-            )
+            )[0]
          );
       }
    }, [product, location.pathname]);
 
-   console.log(product);
 
    useEffect(() => {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
@@ -35,7 +34,7 @@ export default function ProductPage() {
 
    return (
       <div className="flex mt-10 flex-col">
-         <MainPart product={alt} />
+         <MainPart product={product || alt} />
          <Description />
          <Title first="RELATED" second="PRODUCTS" />
          <RelatedProducts arr={relatedProducts} />
