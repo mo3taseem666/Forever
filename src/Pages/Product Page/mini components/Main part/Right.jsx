@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import SelectSize from '../../../../Golbal Components/SelectSize';
@@ -18,7 +17,7 @@ export default function Right({ toShow }) {
          <p className="mt-5 text-sm text-gray-500 font-semibold">
             {toShow.description}
          </p>
-         <SelectSize className="mt-10" />
+         <SelectSize toShow={toShow} className="mt-10" />
          <hr className="my-8" />
          <div className="text-xs flex flex-col gap-1 font-semibold text-gray-500">
             <p>100% Original product.</p>

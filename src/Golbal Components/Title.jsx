@@ -1,8 +1,8 @@
-import React from 'react';
-
-export default function Title({ first, second, textSize,justify }) {
+export default function Title({ first, second, textSize, justify }) {
    return (
-      <div className={`flex text-center ${justify ? justify : 'justify-center'} my-3 items-center gap-2`}>
+      <div
+         className={`flex text-center ${justify ? justify : 'justify-center'} my-3 items-center gap-2`}
+      >
          <p
             className={`flex gap-2 font-semibold ${textSize ? textSize : 'text-3xl'} xs:text-2xl `}
          >

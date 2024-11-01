@@ -1,4 +1,3 @@
-import React from 'react';
 import Title from '../../../Golbal Components/Title';
 import ReasonToChooseUs from './ReasonToChooseUs';
 import Subscribe from '../../../Golbal Components/Subscribe';

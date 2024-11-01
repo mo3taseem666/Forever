@@ -1,8 +1,7 @@
-import React from 'react';
 import ProductCard from '../../../Golbal Components/ProductCard';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css'; // Import slick CSS
-import 'slick-carousel/slick/slick-theme.css'; // Import slick theme CSS
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { settings } from '../../../Files/Slick';
 import NoProductsFoumd from '../../../Golbal Components/NoProductsFoumd';
 

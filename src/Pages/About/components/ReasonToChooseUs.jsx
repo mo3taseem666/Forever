@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function ReasonToChooseUs({ title, details }) {
    return (
       <div className=" group shadow-gray-500 rounded-md shadow-inner relative flex flex-col bg-slate-100 overflow-hidden gap-6 px-14 py-16">

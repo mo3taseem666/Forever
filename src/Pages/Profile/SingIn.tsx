@@ -1,4 +1,3 @@
-import React from 'react';
 import SignInForm from './components/SignInForm';
 import TitleForForm from './components/TitleForForm';
 
@@ -9,7 +8,7 @@ export interface setLoginProp {
 const SingIn: React.FC<setLoginProp> = ({ setLogin }) => {
    return (
       <div className="flex flex-col gap-5 items-center">
-         <TitleForForm title='Login' />
+         <TitleForForm title="Login" />
          <SignInForm setLogin={setLogin} />
       </div>
    );

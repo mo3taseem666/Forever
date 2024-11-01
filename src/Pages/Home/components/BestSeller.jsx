@@ -1,4 +1,3 @@
-import React from 'react';
 import Title from '../../../Golbal Components/Title';
 import { products } from '../../../assets/frontend_assets/assets';
 import ProductCard from '../../../Golbal Components/ProductCard';
@@ -13,7 +12,7 @@ export default function BestSeller() {
          <div className="grid BEST xs:mt-5 mt-10 xs:grid-cols-2 gap-5 grid-cols-5">
             {products
                .filter(el => el.bestseller)
-               .slice(0,5)
+               .slice(0, 5)
                .map(el => (
                   <ProductCard
                      key={el._id}

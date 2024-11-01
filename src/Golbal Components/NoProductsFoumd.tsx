@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function NoProductsFoumd() {
    return (
       <div className="shrink-0 bg-gradient-to-r bg-clip-text from-red-600 to-blue-900">

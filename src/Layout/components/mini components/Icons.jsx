@@ -78,11 +78,11 @@ function CartIcon() {
    const { cart } = useMyProvider();
 
    return (
-      <div className="relative cursor-pointer">
+      <Link to='/Cart' className="relative cursor-pointer">
          <FontAwesomeIcon icon={faCartShopping} />
          <p className="absolute font-semibold text-xs size-4 top-3 left-3 text-white flex items-center justify-center rounded-full bg-indigo-500">
             {cart.length}
          </p>
-      </div>
+      </Link>
    );
 }

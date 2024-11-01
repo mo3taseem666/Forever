@@ -53,7 +53,7 @@ const ProductCard: React.FC<productProps> = ({
    const handleMouseUp = () => {
       const time2: number = Date.now() - (time ? time : 0);
       const isMobile = window.innerWidth <= 768;
-      const threshold = isMobile ? 20 : 200;
+      const threshold = isMobile ? 20 : 500;
 
       if (!isDragging && time2 <= threshold) {
          navigate(`/product/${product._id}`, { state: product });

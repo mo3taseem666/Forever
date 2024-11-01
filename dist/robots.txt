@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://e-commerce-8ortrwnr2-moataseems-projects.vercel.app/
