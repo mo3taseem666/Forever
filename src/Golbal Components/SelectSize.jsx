@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useMyProvider } from '../../Context/SharedStateContext';
 
-export default function SelectSize({ className }) {
+export default function SelectSize({ className,toShow }) {
    const { cart, setCart } = useMyProvider();
    const [selected, setSelected] = useState(null);
    const location = useLocation().pathname.split('/');
@@ -10,15 +10,16 @@ export default function SelectSize({ className }) {
 
    useEffect(() => {
       if (cart.length) {
-         localStorage.setItem('cart',JSON.stringify(cart))
+         localStorage.setItem('cart', JSON.stringify(cart));
       }
    }, [cart]);
 
    function handleAddToCart() {
       if (selected) {
-         setCart(old => [...old, selected]);
+         setCart(old => [...old, {[selected]:toShow}]);
       }
    }
+
    return (
       <div>
          <p className={`text-lg ${className} mb-3 font-medium`}>Select Size</p>

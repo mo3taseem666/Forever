@@ -1,8 +1,8 @@
-import React from 'react';
-
-export default function Subscribe({width}) {
+export default function Subscribe({ width }) {
    return (
-      <div className={`flex flex-col ${width ? width : ''} items-center xs:mt-10 mt-24`}>
+      <div
+         className={`flex flex-col ${width ? width : ''} items-center xs:mt-10 mt-24`}
+      >
          <p className="font-semibold text-2xl xs:text-xl mb-2">
             Subscribe now & get 20% off
          </p>

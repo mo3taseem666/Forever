@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function TitleForForm({ title }: { title: string }) {
    return (
       <div className="flex gap-3 items-center">

@@ -4,8 +4,8 @@ import { useMyProvider } from '../../Context/SharedStateContext';
 import Layout from '../Layout/Layout';
 import NotFoundPage from '../Pages/Issued Routes/NotFoundPage';
 import NotAuthPage from '../Pages/Issued Routes/NotAuthPage';
+import Cart from '../Pages/Cart/Cart';
 
-// Lazy load components
 const Home = lazy(() => import('../Pages/Home/Home'));
 const Profile = lazy(() => import('../Pages/Profile/Profile'));
 const ProductPage = lazy(() => import('../Pages/Product Page/ProductPage'));
@@ -34,6 +34,7 @@ export default function ProtectedRoutes() {
                <Route path="about" element={<About />} />
                <Route path="collection" element={<Collection />} />
                <Route path="contact" element={<Contact />} />
+               <Route path="Cart" element={<Cart />} />
                <Route
                   path="account"
                   element={user ? <NotAuthPage /> : <Profile />}

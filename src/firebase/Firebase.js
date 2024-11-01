@@ -143,7 +143,7 @@ export const getDocumentById = async (collectionName, id) => {
          const { password, ...rest } = data;
          return rest;
       } else {
-         return null; // or throw an error, or handle accordingly
+         return null;
       }
    } catch (error) {
       console.error('Error getting document: ', error);

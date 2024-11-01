@@ -1,4 +1,3 @@
-import React from 'react';
 import Title from '../../Golbal Components/Title';
 import ImgWithParagraphs from './components/ImgWithParagraphs';
 import WyhChooseUs from './components/WyhChooseUs';

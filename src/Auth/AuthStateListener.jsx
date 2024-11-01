@@ -10,30 +10,30 @@ export function AuthStateListener() {
       const savedUser = localStorage.getItem('user');
       const userInfo = localStorage.getItem('userInfo');
       if (savedUser) {
-         setUser(JSON.parse(savedUser)); // Set saved user on load
+         setUser(JSON.parse(savedUser));
       }
 
       const unsubscribe = onAuthStateChanged(auth, user => {
          if (user) {
             setUser(user);
-            localStorage.setItem('user', JSON.stringify(user)); // Persist user
+            localStorage.setItem('user', JSON.stringify(user));
          } else {
             setUser(null);
-            localStorage.removeItem('user'); // Remove user on sign-out
+            localStorage.removeItem('user');
          }
       });
 
-      return () => unsubscribe(); // Clean up the listener on unmount
+      return () => unsubscribe();
    }, [setUser]);
 
    useEffect(() => {
       const userInfo = localStorage.getItem('userInfo');
       if (userInfo) {
-         setUserInfo(JSON.parse(userInfo)); // Set saved user on load
+         setUserInfo(JSON.parse(userInfo));
       } else {
          setUserInfo({})
       }
    }, [setUserInfo, user]);
 
-   return null; // This component does not need to render anything
+   return null;
 }
