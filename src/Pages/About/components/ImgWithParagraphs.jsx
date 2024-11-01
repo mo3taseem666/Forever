@@ -1,9 +1,12 @@
-import AboutImg from '../../../assets/frontend_assets/about_img.webp';
+import loading from '../../../../public/assets/frontend_assets/a-man-on-loading-bar.svg';
+import useGetIMG from '../../../Files/useGetIMG';
 
 export default function ImgWithParagraphs() {
+   const img = useGetIMG('otherImages', 'field', 'About');
+
    return (
       <div className="flex items-center xs:flex-col mt-9 gap-16">
-         <img src={AboutImg} alt="about" className="w-[450px]" />
+         <img src={img?.url || loading} alt="about" className="w-[450px]" />
          <div className="max-w-[775px] text-sm font-medium  text-gray-600 flex flex-col gap-10">
             <p>
                Forever was born out of a passion for innovation and a desire to

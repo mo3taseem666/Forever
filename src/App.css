@@ -241,3 +241,18 @@ body {
       object-position: 81% 80%;
    }
 }
+
+@keyframes loadSpin {
+   0% {
+      transform: rotate(0);
+      background-color: transparent;
+   }
+   100% {
+      transform: rotate(360deg);
+      background: transparent;
+   }
+}
+
+.loadSpin {
+   animation: loadSpin 1s infinite;
+}

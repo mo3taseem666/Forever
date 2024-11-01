@@ -4,13 +4,7 @@ import { useForm } from 'react-hook-form';
 import { SignUpData } from '../../../Files/Interfaces';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { signUpSchema } from '../../../Auth/Yup';
-import {
-   addDataToFirestore,
-   auth,
-   getDocumentById,
-   isEmailUsed,
-   signUpWithEmailPassword
-} from '../../../firebase/Firebase';
+
 import {
    emailUsedToast,
    notifyErrSignUp,
@@ -18,6 +12,7 @@ import {
 } from '../../../Files/Toast';
 import { toast, ToastContainer } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { addDataToFirestore, getDocumentById, isEmailUsed, signUpWithEmailPassword } from '../../../firebase/firebaseTS';
 
 export default function SignUpForm({
    setLogin
@@ -47,7 +42,7 @@ export default function SignUpForm({
       if (!emailUsed) {
          const result1 = await addDataToFirestore('users', data);
 
-         const resul3 = await getDocumentById('users', result1);
+         const resul3 = await getDocumentById('users', result1||'');
          if (result1 && resul3) {
             const result2 = await signUpWithEmailPassword(
                data.email,

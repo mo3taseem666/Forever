@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { LoginSchema } from '../../../Auth/Yup';
-import { signInWithEmailPassword } from '../../../firebase/Firebase';
 import InputErrorMsg from '../../../Golbal Components/InputErrorMsg';
 import { useNavigate } from 'react-router-dom';
 import BelowForm from './BelowForm';
@@ -11,6 +10,7 @@ import { notifyErrLogin } from '../../../Files/Toast';
 import { setLoginProp } from '../SingIn';
 import InputField from './InputField';
 import { useMyProvider } from '../../../../Context/SharedStateContext';
+import { signInWithEmailPassword } from '../../../firebase/firebaseTS';
 
 interface Data {
    email: string;

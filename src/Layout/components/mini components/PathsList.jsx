@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useMyProvider } from '../../../../Context/SharedStateContext';
 
 const navItems = [
    { id: 0, path: '/', name: 'HOME' },
@@ -7,10 +8,12 @@ const navItems = [
    { id: 2, path: '/About', name: 'ABOUT' },
    { id: 3, path: '/Contact', name: 'CONTACT' }
 ];
+const adminID = 'dnbTPNZ4RJeXexLsIL1qKKFefqA3';
 
 export default function PathsList() {
    const [selected, setSelected] = useState(0);
    const location = useLocation();
+   const { user } = useMyProvider();
 
    useEffect(() => {
       window.scrollTo({
@@ -25,6 +28,8 @@ export default function PathsList() {
          setSelected(3);
       } else if (location.pathname === '/') {
          setSelected(0);
+      } else if (location.pathname === '/Admin') {
+         setSelected('Admin');
       } else {
          setSelected(null);
       }
@@ -42,6 +47,16 @@ export default function PathsList() {
                name={el.name}
             />
          ))}
+         {user?.uid === adminID && (
+            <ItemList
+               key="admin"
+               path="Admin"
+               setSelected={setSelected}
+               selected={selected}
+               id="Admin"
+               name="ADMIN"
+            />
+         )}
       </ul>
    );
 }

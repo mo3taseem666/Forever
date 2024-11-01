@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import gmailIcon from '../../../assets/frontend_assets/gmail.svg';
-import { signInWithGoogle } from '../../../firebase/Firebase';
 import { notifyErrLogin } from '../../../Files/Toast';
+import { signInWithGoogle } from '../../../firebase/firebaseTS';
 
 export default function BelowForm() {
    const navigate = useNavigate()

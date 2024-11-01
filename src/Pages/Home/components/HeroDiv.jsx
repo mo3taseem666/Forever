@@ -1,40 +1,50 @@
 import React, { useEffect, useState } from 'react';
-import heroPic3 from '../../../assets/frontend_assets/2147825037.webp';
-import heroPic2 from '../../../assets/frontend_assets/2148760653.webp';
-import heroPic from '../../../assets/frontend_assets/2148624967.webp';
 import LeftPart from '../mini components/Hero Div/LeftPart';
+import { getAllPictures } from '../../../firebase/firebaseTS';
 
 export default function HeroDiv() {
-   const [selected, setSelected] = useState(heroPic2);
+   const [selected, setSelected] = useState(null);
+   const [pics, setPics] = useState([]);
 
-   const [count, setCount] = useState(0);
    useEffect(() => {
-      if (selected !== heroPic) {
-         setCount(old => old + 1);
+      if (pics.length > 0) {
+         setSelected(pics[0]?.url);
       }
-   }, [selected]);
+   }, [pics]);
+
+   useEffect(() => {
+      async function getAllPics() {
+         const allPics = await getAllPictures('mainPictures');
+         if (allPics) {
+            setPics(allPics);
+         }
+      }
+      getAllPics();
+   }, []);
+
+   console.log(pics);
 
    return (
       <>
          <div className={`border border-black relative h-full w-full`}>
-            <img
-               key={selected}
-               src={selected}
-               alt="heroPic"
-               className={`w-full ${count && 'fadeScale'} h-[650px] ${
-                  selected === heroPic2
-                     ? 'object-right-cus2'
-                     : selected === heroPic3
-                       ? 'xs:object-right-cus3'
-                       : ''
-               } xs:object-right-cus2 xs:h-[500px] xs:object-right-cus object-cover shrink-0`}
-            />
+            {pics.length > 0 ? (
+               <img
+                  key={selected}
+                  src={selected}
+                  alt="heroPic"
+                  className={`w-full fadeScale h-[650px] ${
+                     selected === pics[2]?.url ? 'xs:object-right-cus3' : ''
+                  } xs:object-right-cus2 xs:h-[500px] xs:object-right-cus object-cover shrink-0`}
+               />
+            ) : (
+               <div className="h-[650px] w-full xs:h-[500px]"></div>
+            )}
          </div>
          <LeftPart
             selected={selected}
-            heroPic={heroPic}
-            heroPic2={heroPic2}
-            heroPic3={heroPic3}
+            heroPic={pics[2]?.url}
+            heroPic2={pics[0]?.url}
+            heroPic3={pics[1]?.url}
             setSelected={setSelected}
          />
       </>

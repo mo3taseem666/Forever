@@ -15,11 +15,6 @@ export default function Icons() {
    const { user, setShowLogOut, showLogOut,userInfo } = useMyProvider();
    const [img, setImg] = useState(null);
 
-   console.log(img);
-   
-
-   
-
    function handleClick(e) {
       e.stopPropagation();
       setShowLogOut(!showLogOut);

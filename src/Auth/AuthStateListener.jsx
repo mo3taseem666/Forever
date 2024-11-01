@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useMyProvider } from '../../Context/SharedStateContext';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../firebase/Firebase';
+import { auth } from '../firebase/firebaseTS';
 
 export function AuthStateListener() {
    const { setUser, setUserInfo, user } = useMyProvider();

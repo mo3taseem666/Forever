@@ -1,13 +1,18 @@
 import Title from '../../Golbal Components/Title';
-import contactImg from '../../assets/frontend_assets/contact_img.webp';
 import Subscribe from '../../Golbal Components/Subscribe';
+import useGetIMG from '../../Files/useGetIMG';
+import loading from '../../../public/assets/frontend_assets/a-man-on-loading-bar.svg'
+
 
 export default function Contact() {
+   const img = useGetIMG('otherImages','field','Contact')
+   console.log(img);
+   
    return (
       <div className="border-t mt-5 flex flex-col items-center pt-5">
          <Title first="CONTACT" second="US" />
          <div className="flex xs:flex-col xs:mb-10 gap-10 mt-10 items-center">
-            <img src={contactImg} alt="contact-img" className="w-[480px]" />
+            <img src={img?.url ||loading } alt="contact-img" className="w-[480px]" />
             <div className="flex flex-col xs:w-full font-medium text-gray-500 gap-6">
                <p className="font-bold text-xl text-gray-700">Our store</p>
                <div>
