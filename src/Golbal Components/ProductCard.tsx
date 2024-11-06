@@ -73,6 +73,7 @@ const ProductCard: React.FC<productProps> = ({
       >
          <div className="mb-2 overflow-hidden">
             <img
+               loading='lazy'
                className="w-full hover:scale-110 duration-200"
                src={product?.image[0]}
                alt="product"
