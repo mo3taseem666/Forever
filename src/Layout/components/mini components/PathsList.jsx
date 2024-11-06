@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useMyProvider } from '../../../../Context/SharedStateContext';
 
-const navItems = [
+export const navItems = [
    { id: 0, path: '/', name: 'HOME' },
    { id: 1, path: '/Collection', name: 'COLLECTION' },
    { id: 2, path: '/About', name: 'ABOUT' },
