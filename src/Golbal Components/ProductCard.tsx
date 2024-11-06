@@ -6,7 +6,7 @@ export interface productProps {
    name: string;
    price: number;
    img: string[];
-   product: { _id: number,image:string[] };
+   product: { _id: number; image: string[] };
    smallName?: string;
    width?: string;
 }
@@ -61,8 +61,15 @@ const ProductCard: React.FC<productProps> = ({
       setIsDragging(false);
    };
 
+   const handleClick = () => {
+      if (!isDragging) {
+         navigate(`/product/${product._id}`, { state: product });
+      }
+   };
+
    return (
       <div
+         onClick={handleClick}
          onMouseDown={handleMouseDown}
          onMouseMove={handleMouseMove}
          onMouseUp={handleMouseUp}
@@ -73,7 +80,7 @@ const ProductCard: React.FC<productProps> = ({
       >
          <div className="mb-2 overflow-hidden">
             <img
-               loading='lazy'
+               loading="lazy"
                className="w-full hover:scale-110 duration-200"
                src={product?.image[0]}
                alt="product"
