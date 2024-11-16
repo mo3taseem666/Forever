@@ -61,8 +61,11 @@ const ProductCard: React.FC<productProps> = ({
       setIsDragging(false);
    };
 
+   console.log(isDragging);
+   
+
    const handleClick = () => {
-      if (!isDragging) {
+      if (isDragging) {
          navigate(`/product/${product._id}`, { state: product });
       }
    };
